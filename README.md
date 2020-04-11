@@ -1,4 +1,4 @@
-# RGB_colors
+# RGB color picker
 Simple RGB color slider for your PC. A great tool for designers or coders when they need a RGB color code of specific color for their work
 
 ## Features:
