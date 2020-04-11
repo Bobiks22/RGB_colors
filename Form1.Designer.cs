@@ -1,6 +1,6 @@
 ﻿namespace RGB_colors
 {
-    partial class Form1
+    partial class RgbColorPicker
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RgbColorPicker));
             this.colorBox = new System.Windows.Forms.PictureBox();
             this.chbPercent = new System.Windows.Forms.CheckBox();
             this.lblRed = new System.Windows.Forms.Label();
@@ -75,7 +76,7 @@
             // 
             // tbRed
             // 
-            this.tbRed.Location = new System.Drawing.Point(53, 266);
+            this.tbRed.Location = new System.Drawing.Point(56, 263);
             this.tbRed.Name = "tbRed";
             this.tbRed.Size = new System.Drawing.Size(45, 20);
             this.tbRed.TabIndex = 6;
@@ -83,7 +84,7 @@
             // 
             // tbGreen
             // 
-            this.tbGreen.Location = new System.Drawing.Point(245, 266);
+            this.tbGreen.Location = new System.Drawing.Point(249, 263);
             this.tbGreen.Name = "tbGreen";
             this.tbGreen.Size = new System.Drawing.Size(45, 20);
             this.tbGreen.TabIndex = 8;
@@ -100,7 +101,7 @@
             // 
             // tbBlue
             // 
-            this.tbBlue.Location = new System.Drawing.Point(437, 263);
+            this.tbBlue.Location = new System.Drawing.Point(439, 263);
             this.tbBlue.Name = "tbBlue";
             this.tbBlue.Size = new System.Drawing.Size(45, 20);
             this.tbBlue.TabIndex = 10;
@@ -109,7 +110,7 @@
             // lblBlue
             // 
             this.lblBlue.AutoSize = true;
-            this.lblBlue.Location = new System.Drawing.Point(391, 269);
+            this.lblBlue.Location = new System.Drawing.Point(387, 266);
             this.lblBlue.Name = "lblBlue";
             this.lblBlue.Size = new System.Drawing.Size(28, 13);
             this.lblBlue.TabIndex = 9;
@@ -125,7 +126,7 @@
             // 
             // scrollGreen
             // 
-            this.scrollGreen.Location = new System.Drawing.Point(5, 176);
+            this.scrollGreen.Location = new System.Drawing.Point(5, 164);
             this.scrollGreen.Name = "scrollGreen";
             this.scrollGreen.Size = new System.Drawing.Size(479, 45);
             this.scrollGreen.TabIndex = 13;
@@ -133,13 +134,13 @@
             // 
             // scrollBlue
             // 
-            this.scrollBlue.Location = new System.Drawing.Point(5, 215);
+            this.scrollBlue.Location = new System.Drawing.Point(5, 202);
             this.scrollBlue.Name = "scrollBlue";
             this.scrollBlue.Size = new System.Drawing.Size(479, 45);
             this.scrollBlue.TabIndex = 14;
             this.scrollBlue.Scroll += new System.EventHandler(this.scrollBlue_Scroll);
             // 
-            // Form1
+            // RgbColorPicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,8 +156,10 @@
             this.Controls.Add(this.lblRed);
             this.Controls.Add(this.chbPercent);
             this.Controls.Add(this.colorBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "RgbColorPicker";
+            this.Text = "RGB Color Picker";
             ((System.ComponentModel.ISupportInitialize)(this.colorBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scrollRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scrollGreen)).EndInit();

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace RGB_colors
 {
-    public partial class Form1 : Form
+    public partial class RgbColorPicker : Form
     {
         int red = 0;
         int blue = 0;
@@ -18,7 +18,7 @@ namespace RGB_colors
         int maximum;
         double koef;
 
-        public Form1()
+        public RgbColorPicker()
         {
             InitializeComponent();
             SetUp();
