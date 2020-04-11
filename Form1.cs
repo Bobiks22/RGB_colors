@@ -39,19 +39,12 @@ namespace RGB_colors
             scrollRed.Value = red;
             scrollBlue.Value = blue;
             scrollGreen.Value = green;
-            timerColor.Start();
-            
-        }
 
-        private void timerColor_Tick(object sender, EventArgs e)
-        {
-
-            colorBox.BackColor = Color.FromArgb(red, green, blue);
-            UpdateTb();
+            Update();
 
         }
 
-        private void UpdateTb()
+        private void Update()
         {
             if(tbRed.Focused == false)
             {
@@ -67,8 +60,10 @@ namespace RGB_colors
             {
                 tbBlue.Text = Convert.ToString(Math.Round(blue * koef));
             }
-            
+
+            colorBox.BackColor = Color.FromArgb(red, green, blue);
         }
+
         private void chbPercent_CheckStateChanged(object sender, EventArgs e)
         {
             if(chbPercent.Checked == true)
@@ -99,66 +94,69 @@ namespace RGB_colors
             scrollBlue.Value = Convert.ToInt32(Math.Round(blue * koef));
             scrollGreen.Value = Convert.ToInt32(Math.Round(green * koef));
 
+            Update();
+
         }
 
         private void scrollRed_Scroll(object sender, EventArgs e)
         {
             red = Convert.ToInt32(Math.Round(scrollRed.Value / koef));
-           
+            Update();
         }
 
         private void scrollGreen_Scroll(object sender, EventArgs e)
         {
             green = Convert.ToInt32(Math.Round(scrollGreen.Value / koef));
-            
-           
+            Update();
         }
 
         private void scrollBlue_Scroll(object sender, EventArgs e)
         {
             blue = Convert.ToInt32(Math.Round(scrollBlue.Value / koef));
-            
-           
+            Update();
         }
 
-        //private void tbRed_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (tbRed.Text != string.Empty && tbRed.Text.Length <= 3)
-        //    {
-        //        int value = Int32.Parse(tbRed.Text);
-        //        if (value >= 0 && value <= maximum)
-        //        {
-        //            red = Convert.ToInt32(Math.Round(value * koef));
-        //            scrollRed.Value = value;
-        //        }
-        //    }
-        //}
+        private void tbRed_TextChanged(object sender, EventArgs e)
+        {
+            if (tbRed.Text != string.Empty && tbRed.Text.Length <= 3 && tbRed.Focused == true)
+            {
+                int value = Int32.Parse(tbRed.Text);
+                if (value >= 0 && value <= maximum)
+                {
+                    red = Convert.ToInt32(Math.Round(value / koef));
+                    scrollRed.Value = value;
+                }
+                Update();
+            }
+        }
 
-        //private void tbGreen_TextChanged(object sender, EventArgs e)
-        //{
+        private void tbGreen_TextChanged(object sender, EventArgs e)
+        {
 
-        //    if (tbGreen.Text != string.Empty && tbGreen.Text.Length <= 3)
-        //    {
-        //        int value = Int32.Parse(tbGreen.Text);
-        //        if (value >= 0 && value <= maximum)
-        //        {
-        //            green = Convert.ToInt32(Math.Round(value * koef));
-        //            scrollGreen.Value = value;
-        //        }
-        //    }
-        //}
+            if (tbGreen.Text != string.Empty && tbGreen.Text.Length <= 3 && tbGreen.Focused == true)
+            {
+                int value = Int32.Parse(tbGreen.Text);
+                if (value >= 0 && value <= maximum)
+                {
+                    green = Convert.ToInt32(Math.Round(value / koef));
+                    scrollGreen.Value = value;
+                }
+                Update();
+            }
+        }
 
-        //private void tbBlue_TextChanged(object sender, EventArgs e)
-        //{
-        //    if (tbBlue.Text != string.Empty && tbBlue.Text.Length <= 3)
-        //    {
-        //        int value = Int32.Parse(tbBlue.Text);
-        //        if (value >= 0 && value <= maximum)
-        //        {
-        //            blue = Convert.ToInt32(Math.Round(value * koef));
-        //            scrollBlue.Value = value;
-        //        }
-        //    }
-        //}
+        private void tbBlue_TextChanged(object sender, EventArgs e)
+        {
+            if (tbBlue.Text != string.Empty && tbBlue.Text.Length <= 3 && tbBlue.Focused == true)
+            {
+                int value = Int32.Parse(tbBlue.Text);
+                if (value >= 0 && value <= maximum)
+                {
+                    blue = Convert.ToInt32(Math.Round(value / koef));
+                    scrollBlue.Value = value;
+                }
+                Update();
+            }
+        }
     }
 }

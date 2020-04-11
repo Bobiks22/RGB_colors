@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.colorBox = new System.Windows.Forms.PictureBox();
-            this.timerColor = new System.Windows.Forms.Timer(this.components);
             this.chbPercent = new System.Windows.Forms.CheckBox();
             this.lblRed = new System.Windows.Forms.Label();
             this.tbRed = new System.Windows.Forms.TextBox();
@@ -54,11 +52,6 @@
             this.colorBox.Size = new System.Drawing.Size(230, 68);
             this.colorBox.TabIndex = 0;
             this.colorBox.TabStop = false;
-            // 
-            // timerColor
-            // 
-            this.timerColor.Interval = 20;
-            this.timerColor.Tick += new System.EventHandler(this.timerColor_Tick);
             // 
             // chbPercent
             // 
@@ -86,6 +79,7 @@
             this.tbRed.Name = "tbRed";
             this.tbRed.Size = new System.Drawing.Size(45, 20);
             this.tbRed.TabIndex = 6;
+            this.tbRed.TextChanged += new System.EventHandler(this.tbRed_TextChanged);
             // 
             // tbGreen
             // 
@@ -93,6 +87,7 @@
             this.tbGreen.Name = "tbGreen";
             this.tbGreen.Size = new System.Drawing.Size(45, 20);
             this.tbGreen.TabIndex = 8;
+            this.tbGreen.TextChanged += new System.EventHandler(this.tbGreen_TextChanged);
             // 
             // lblGreen
             // 
@@ -109,6 +104,7 @@
             this.tbBlue.Name = "tbBlue";
             this.tbBlue.Size = new System.Drawing.Size(45, 20);
             this.tbBlue.TabIndex = 10;
+            this.tbBlue.TextChanged += new System.EventHandler(this.tbBlue_TextChanged);
             // 
             // lblBlue
             // 
@@ -173,7 +169,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox colorBox;
-        private System.Windows.Forms.Timer timerColor;
         private System.Windows.Forms.CheckBox chbPercent;
         private System.Windows.Forms.Label lblRed;
         private System.Windows.Forms.TextBox tbRed;
