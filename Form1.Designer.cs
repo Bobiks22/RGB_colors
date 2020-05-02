@@ -159,7 +159,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RgbColorPicker";
-            this.Text = "RGB Color Picker";
+            this.Text = "RGB Color Mixer";
             ((System.ComponentModel.ISupportInitialize)(this.colorBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scrollRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scrollGreen)).EndInit();
