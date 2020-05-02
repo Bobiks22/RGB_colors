@@ -156,7 +156,7 @@
             this.Controls.Add(this.lblRed);
             this.Controls.Add(this.chbPercent);
             this.Controls.Add(this.colorBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RgbColorPicker";
             this.Text = "RGB Color Picker";
